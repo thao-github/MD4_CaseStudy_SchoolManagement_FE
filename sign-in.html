@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<!-- Head -->
+
+<head>
+    <title>eSchool | Sign-In</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="keywords" content="Bootstrap Theme, Freebies, Dashboard, MIT license">
+    <meta name="description" content="Stream - Dashboard UI Kit">
+    <meta name="author" content="htmlstream.com">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <!-- Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Components Vendor Styles -->
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+    <!-- Theme Styles -->
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Custom Charts -->
+    <style>
+        .js-doughnut-chart {
+            width: 70px !important;
+            height: 70px !important;
+        }
+    </style>
+</head>
+<!-- End Head -->
+
+<body>
+<!-- Header (Topbar) -->
+<header class="u-header">
+    <div class="u-header-left">
+        <a class="u-header-logo" href="index.html">
+            <img class="u-logo-desktop" src="assets/img/logo.png" width="160" alt="Stream Dashboard">
+            <img class="img-fluid u-logo-mobile" src="assets/img/logo-mobile.png" width="50" alt="Stream Dashboard">
+        </a>
+    </div>
+
+    <div class="u-header-middle">
+        <a class="js-sidebar-invoker u-sidebar-invoker text-danger" href="#!" data-is-close-all-except-this="true"
+           data-target="#sidebar">
+            <i class="fa fa-bars u-sidebar-invoker__icon--open"></i>
+            <i class="fa fa-times u-sidebar-invoker__icon--close"></i>
+        </a>
+
+        <div class="u-header-search" data-search-mobile-invoker="#headerSearchMobileInvoker"
+             data-search-target="#headerSearch">
+            <a id="headerSearchMobileInvoker" class="btn btn-link input-group-prepend u-header-search__mobile-invoker"
+               href="#!">
+                <i class="fa fa-search"></i>
+            </a>
+
+            <div id="headerSearch" class="u-header-search-form">
+                <form>
+                    <div class="input-group">
+                        <!-- <button class="btn-link input-group-prepend u-header-search__btn" type="submit">
+                            <i class="fa fa-search"></i>
+                        </button> -->
+                        <input class="form-control u-header-search__field" type="search" placeholder="Search">
+                        <button type="submit" class="bg-gradient text-white">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="u-header-right">
+        <!-- Register-->
+        <li class="u-sidebar-nav-menu__item">
+            <a id="register" class="u-sidebar-nav-menu__link active" href="register.html">
+                <span class="u-sidebar-nav-menu__item-title">Register</span>
+            </a>
+        </li>
+        <!-- End Register -->
+        <!-- Register-->
+        <li class="u-sidebar-nav-menu__item" style="float: left; margin-bottom: 10px;">
+            <a class="u-sidebar-nav-menu__link active" href="sign-in.html">
+                <span id="login" class="u-sidebar-nav-menu__item-title">Login</span>
+            </a>
+        </li>
+        <!-- End Register -->
+    </div>
+</header>
+<!-- End Header (Topbar) -->
+
+<main class="u-main" role="main">
+    <div class="u-content">
+        <div class="u-body">
+            <section class="es-form-area">
+                <div class="card">
+                    <header class="card-header bg-gradient border-0 pt-5 pb-5 d-flex align-items-center">
+                        <h2 class="text-white mb-0">Sign In</h2>
+                    </header>
+                    <div class="card-body">
+                        <div action="" class="es-form es-add-form">
+                            <div class="col-lg-8 offset-lg-2 col-md-12 mb-4">
+                                <label for="username">Username:</label>
+                                <input id="username" name="username" class="es-add-select">
+                            </div>
+                            <div class="col-lg-8 offset-lg-2 col-md-12 mb-4">
+                                <label for="password">Password:</label>
+                                <input id="password" name="password" class="es-add-select">
+                            </div>
+                            <div class="col-lg-4 offset-lg-4 col-md-12 text-center">
+                                <input  id="btn-log-in" class="btn btn-danger btn-block bg-gradient border-0 text-white" type="submit" value="Log In"></input>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+
+<!-- Global Vendor -->
+<script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+<script src="assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+<script src="assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+<script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+<!-- Plugins -->
+<script src="assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/vendor/chart.js/dist/Chart.min.js"></script>
+<script src="assets/js/jquery.nice-select.min.js"></script>
+<script src="assets/js/jquery-ui.min.js"></script>
+
+<!-- Initialization  -->
+<script src="assets/js/sidebar-nav.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/dashboard-page-scripts.js"></script>
+<!--<script src="assets/js/scripts.js"></script>-->
+</body>
+<script>
+$(document).ready(function (){
+    let signInForm = {};
+    $('#btn-log-in').click(function () {
+        signInForm.username = $('#username').val();
+        signInForm.password = $('#password').val();
+        let signInFormOBJ = JSON.stringify(signInForm);
+        $.ajax({
+            url: 'http://localhost:8080/signin',
+            method: 'POST',
+            data: signInFormOBJ,
+            contentType: 'application/json; charset=utf8',
+            success: function (data){
+                console.log('data login ===>', data)
+                window.sessionStorage.removeItem('TOKEN_KEY');
+                window.sessionStorage.setItem('TOKEN_KEY', data.token);
+                window.sessionStorage.removeItem('NAME_KEY');
+                window.sessionStorage.setItem('NAME_KEY', data.name);
+                window.sessionStorage.removeItem('AVATAR_KEY');
+                window.sessionStorage.setItem('AVATAR_KEY', data.avatar);
+                window.sessionStorage.setItem('ROLE_KEY', JSON.stringify(data.roles));
+                window.location.href='user-account.html';
+            }
+        })
+
+    })
+})
+</script>
+</html>
