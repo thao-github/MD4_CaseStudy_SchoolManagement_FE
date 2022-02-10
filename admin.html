@@ -374,10 +374,35 @@
                 <ul class="u-sidebar-nav-menu u-sidebar-nav-menu--top-level">
                     <!-- Coach -->
                     <li class="u-sidebar-nav-menu__item">
-                        <a class="u-sidebar-nav-menu__link active" href="index.html">
-                            <i class="fas fa-tachometer-alt u-sidebar-nav-menu__item-icon"></i>
-                            <span class="u-sidebar-nav-menu__item-title">Coach</span>
+                        <a class="u-sidebar-nav-menu__link" href="#!" data-target="#attendances">
+                            <i class="fas fa-user-check u-sidebar-nav-menu__item-icon"></i>
+                            <span class="u-sidebar-nav-menu__item-title">Coaches</span>
+                            <i class="fa fa-angle-right u-sidebar-nav-menu__item-arrow"></i>
+                            <span class="u-sidebar-nav-menu__indicator"></span>
                         </a>
+
+                        <ul id="attendances" class="u-sidebar-nav-menu u-sidebar-nav-menu--second-level" style="display: none;">
+                            <li class="u-sidebar-nav-menu__item">
+                                <a class="u-sidebar-nav-menu__link" href="students-all.html">
+                                    <span class="u-sidebar-nav-menu__item-title">All Coaches</span>
+                                </a>
+                            </li>
+                            <li class="u-sidebar-nav-menu__item">
+                                <a class="u-sidebar-nav-menu__link" href="students-add.html">
+                                    <span class="u-sidebar-nav-menu__item-title">Add New Coach</span>
+                                </a>
+                            </li>
+<!--                            <li class="u-sidebar-nav-menu__item">-->
+<!--                                <a class="u-sidebar-nav-menu__link" href="attendances-report-blank.html">-->
+<!--                                    <span class="u-sidebar-nav-menu__item-title">Attendances Report Blank</span>-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            <li class="u-sidebar-nav-menu__item">-->
+<!--                                <a class="u-sidebar-nav-menu__link" href="attendances-report.html">-->
+<!--                                    <span class="u-sidebar-nav-menu__item-title">Attendances Report</span>-->
+<!--                                </a>-->
+<!--                            </li>-->
+                        </ul>
                     </li>
                     <!-- End Coach -->
 
@@ -392,57 +417,18 @@
 
                         <ul id="students" class="u-sidebar-nav-menu u-sidebar-nav-menu--second-level" style="display: none;">
                             <li class="u-sidebar-nav-menu__item">
-                                <a class="u-sidebar-nav-menu__link" href="students-all-blank.html">
-                                    <span class="u-sidebar-nav-menu__item-title">All Student Blank</span>
-                                </a>
-                            </li>
-                            <li class="u-sidebar-nav-menu__item">
                                 <a class="u-sidebar-nav-menu__link" href="students-all.html">
-                                    <span class="u-sidebar-nav-menu__item-title">All Student</span>
+                                    <span class="u-sidebar-nav-menu__item-title">All Students</span>
                                 </a>
                             </li>
                             <li class="u-sidebar-nav-menu__item">
                                 <a class="u-sidebar-nav-menu__link" href="students-add.html">
-                                    <span class="u-sidebar-nav-menu__item-title">Add Student</span>
+                                    <span class="u-sidebar-nav-menu__item-title">Add New Student</span>
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <!-- End Students -->
-
-                    <!-- Attendances -->
-                    <li class="u-sidebar-nav-menu__item">
-                        <a class="u-sidebar-nav-menu__link" href="#!" data-target="#attendances">
-                            <i class="fas fa-user-check u-sidebar-nav-menu__item-icon"></i>
-                            <span class="u-sidebar-nav-menu__item-title">Attendances</span>
-                            <i class="fa fa-angle-right u-sidebar-nav-menu__item-arrow"></i>
-                            <span class="u-sidebar-nav-menu__indicator"></span>
-                        </a>
-
-                        <ul id="attendances" class="u-sidebar-nav-menu u-sidebar-nav-menu--second-level" style="display: none;">
-                            <li class="u-sidebar-nav-menu__item">
-                                <a class="u-sidebar-nav-menu__link" href="attendances-blank.html">
-                                    <span class="u-sidebar-nav-menu__item-title">Attendances Blank</span>
-                                </a>
-                            </li>
-                            <li class="u-sidebar-nav-menu__item">
-                                <a class="u-sidebar-nav-menu__link" href="attendances-list.html">
-                                    <span class="u-sidebar-nav-menu__item-title">Attendances List</span>
-                                </a>
-                            </li>
-                            <li class="u-sidebar-nav-menu__item">
-                                <a class="u-sidebar-nav-menu__link" href="attendances-report-blank.html">
-                                    <span class="u-sidebar-nav-menu__item-title">Attendances Report Blank</span>
-                                </a>
-                            </li>
-                            <li class="u-sidebar-nav-menu__item">
-                                <a class="u-sidebar-nav-menu__link" href="attendances-report.html">
-                                    <span class="u-sidebar-nav-menu__item-title">Attendances Report</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- End Attendances -->
 
                     <!-- Classes -->
                     <li class="u-sidebar-nav-menu__item">
@@ -669,8 +655,6 @@
 <!--<script src="assets/js/scripts.js"></script>-->
 </body>
 <script>
-    if(window.sessionStorage.getItem('TOKEN_KEY')){
-        window.location.href='user-account.html';
-    }
+
 </script>
 </html>

@@ -495,12 +495,12 @@
             <section class="profile-area card">
                 <div class="profile-content card-body d-flex">
                     <div class="user-image-wrap mr-5">
-                        <img src="assets/img/profile-photo.png" alt="">
+                        <img id="img">
                     </div>
                     <div class="user-about">
                         <h2 class="text-danger" id="name"></h2>
                         <p><strong>(Mathematics & Accounting Teacher)</strong></p>
-                        <p id="description"></p>
+                        <p id="username"></p>
                         <p id="email"></p>
                         <p id="phone"></p>
                         <p id="address"></p>
@@ -534,22 +534,15 @@
 </body>
 <script>
 
-    function getInfo(id) {
-        $.ajax({
-            type: "GET",
-            url: "localhost:8080/api/auth/signin",
-            success: function (data) {
-                document.getElementById("name").innerText = data.name;
-                document.getElementById("description").innerText = data.description;
-                document.getElementById("email").innerText = data.email;
-                document.getElementById("phone").innerText = data.phone;
-                document.getElementById("address").innerText = data.address;
-            },
-            error: function (err) {
-                console.log(err)
-            }
-        })
-    }
+    let user = JSON.parse(window.sessionStorage.getItem("USER_KEY"));
+
+    document.getElementById("name").innerText = user.name;
+    document.getElementById("username").innerText = user.username;
+    document.getElementById("email").innerText = user.email;
+    document.getElementById("phone").innerText = user.phone;
+    document.getElementById("address").innerText = user.address;
+    document.getElementById("img").src = user.avatar;
+
 </script>
 
 </html>

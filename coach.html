@@ -494,18 +494,18 @@
             <section class="profile-area card">
                 <div class="profile-content card-body d-flex">
                     <div class="user-image-wrap mr-5">
-                        <img src="assets/img/profile-photo.png" alt="">
+                        <img id="img">
                     </div>
                     <div class="user-about">
-                        <h2 class="text-danger" id="name"></h2>
-                        <p><strong>(Mathematics & Accounting Teacher)</strong></p>
-                        <p id="description"></p>
+                        <h2 id="name"></h2>
+                        <p id="username"></p>
+<!--                        <p><strong>(Java & PHP Coach)</strong></p>-->
                         <p id="email"></p>
-                        <p id="phone"></p>
-                        <p id="address"></p>
+<!--                        <p id="phone">Phone: 0909.999.999</p>-->
+<!--                        <p id="address">Address: Ho Chi Minh City, Vietnam</p>-->
                         <br>
                         <br>
-                        <a href="edit-my-profile.html" class="btn btn-outline-danger pl-4 pr-4">Edit</a>
+                        <a href="edit-my-profile.html" class="btn btn-outline-danger pl-4 pr-4" onclick="edit()">Edit</a>
                     </div>
                 </div>
             </section>
@@ -513,6 +513,51 @@
     </div>
 </main>
 
+<!--edit-->
+<section class="es-form-area">
+    <div class="card">
+        <header class="card-header bg-gradient border-0 pt-5 pb-5 d-flex align-items-center">
+            <h2 class="text-white mb-0">Edit teacher's profile</h2>
+        </header>
+        <div class="card-body">
+            <form action="" class="es-form es-add-form">
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2 col-md-12 mb-4">
+                        <label>Teacher's Name</label>
+                        <input id="nameEdit" type="text" placeholder="Alexa">
+                    </div>
+                    <div class="col-lg-8 offset-lg-2 col-md-12 mb-4">
+                        <label for="description">Description</label>
+                        <input id="description" type="text" placeholder="Alexander">
+                    </div>
+                    <div class="col-lg-8 offset-lg-2 col-md-12 mb-4">
+                        <label>Email</label>
+                        <input id="emailEdit" type="email" placeholder="example@gmail.com">
+                    </div>
+                    <div class="col-lg-8 offset-lg-2 col-md-12 mb-4">
+                        <label>Phone</label>
+                        <input id="phoneEdit" type="tel" placeholder="+99123456780">
+                    </div>
+                    <div class="col-lg-8 offset-lg-2 col-md-12 mb-4">
+                        <label for="subject">Subject</label>
+                        <select id="subject" class="es-add-select">
+                            <option data-display="Physics">Physics</option>
+                            <option value="1">Chemistry</option>
+                            <option value="2">Biology</option>
+                            <option value="3">Zoology</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-4 offset-lg-4 col-md-12 text-center">
+                        <a href="" class="btn btn-danger btn-block bg-gradient border-0 text-white">Add</a>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</section>
+
+<!--End Edit-->
 <!-- Global Vendor -->
 <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
 <script src="assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
@@ -530,5 +575,78 @@
 <script src="assets/js/main.js"></script>
 <script src="assets/js/dashboard-page-scripts.js"></script>
 <!--<script src="assets/js/scripts.js"></script>-->
+
+<script>
+    getInfo()
+
+    function getInfo() {
+        let user = JSON.parse(window.sessionStorage.getItem("USER_KEY"));
+        document.getElementById("name").innerText = user.name;
+        document.getElementById("username").innerText = user.username;
+        document.getElementById("email").innerText = user.email;
+        document.getElementById("img").src = user.avatar;
+
+    }
+
+    function showEdit(id) {
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/products/" + id,
+
+            success: function (data) {
+                document.getElementById("idEdit").value = data.id
+                document.getElementById("nameEdit").value = data.name
+                document.getElementById("imgEdit").value = data.img
+                document.getElementById("priceEdit").value = data.price
+                document.getElementById("descriptionEdit").value = data.description
+                document.getElementById("quantityEdit").value = data.quantity
+                document.getElementById("idCategoryEdit").value = data.category.id
+            },
+            error: function (err) {
+                console.log(err)
+            }
+        })
+    }
+
+
+    function edit() {
+        let id = document.getElementById("idEdit").value;
+        let name = document.getElementById("nameEdit").value;
+        let img = document.getElementById("imgEdit").value;
+        let price = document.getElementById("priceEdit").value;
+        let description = document.getElementById("descriptionEdit").value;
+        let quantity = document.getElementById("quantityEdit").value;
+        let idCategory = document.getElementById("idCategoryEdit").value;
+        let product = {
+            id: id,
+            name: name,
+            img: img,
+            price: price,
+            description: description,
+            quantity: quantity,
+            category: {id: idCategory}
+        }
+
+        $.ajax({
+            type: "PUT",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            url: "http://localhost:8080/products/" + id,
+            data: JSON.stringify(product),
+            //xử lý khi thành công
+            success: function (data) {
+                list()
+            },
+            error: function (err) {
+                console.log(err)
+            }
+        })
+    }
+
+
+
+</script>
 </body>
 </html>

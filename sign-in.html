@@ -112,7 +112,8 @@
                                 <input id="password" name="password" class="es-add-select">
                             </div>
                             <div class="col-lg-4 offset-lg-4 col-md-12 text-center">
-                                <input  id="btn-log-in" class="btn btn-danger btn-block bg-gradient border-0 text-white" type="submit" value="Log In"></input>
+                                <input id="btn-log-in" class="btn btn-danger btn-block bg-gradient border-0 text-white"
+                                       type="submit" value="Log In">
                             </div>
                         </div>
                     </div>
@@ -141,31 +142,28 @@
 <!--<script src="assets/js/scripts.js"></script>-->
 </body>
 <script>
-$(document).ready(function (){
-    let signInForm = {};
-    $('#btn-log-in').click(function () {
-        signInForm.username = $('#username').val();
-        signInForm.password = $('#password').val();
-        let signInFormOBJ = JSON.stringify(signInForm);
-        $.ajax({
-            url: 'http://localhost:8080/signin',
-            method: 'POST',
-            data: signInFormOBJ,
-            contentType: 'application/json; charset=utf8',
-            success: function (data){
-                console.log('data login ===>', data)
-                window.sessionStorage.removeItem('TOKEN_KEY');
-                window.sessionStorage.setItem('TOKEN_KEY', data.token);
-                window.sessionStorage.removeItem('NAME_KEY');
-                window.sessionStorage.setItem('NAME_KEY', data.name);
-                window.sessionStorage.removeItem('AVATAR_KEY');
-                window.sessionStorage.setItem('AVATAR_KEY', data.avatar);
-                window.sessionStorage.setItem('ROLE_KEY', JSON.stringify(data.roles));
-                window.location.href='user-account.html';
-            }
-        })
+    $(document).ready(function () {
+        let signInForm = {};
+        $('#btn-log-in').click(function () {
+            signInForm.username = $('#username').val();
+            signInForm.password = $('#password').val();
+            let signInFormOBJ = JSON.stringify(signInForm);
+            $.ajax({
+                url: 'http://localhost:8080/signin',
+                method: 'POST',
+                data: signInFormOBJ,
+                contentType: 'application/json; charset=utf8',
+                success: function (data) {
+                    console.log('data login ===>', data)
+                    window.sessionStorage.removeItem('TOKEN_KEY');
+                    window.sessionStorage.setItem('TOKEN_KEY', data.token);
+                    window.sessionStorage.removeItem('USER_KEY');
+                    window.sessionStorage.setItem('USER_KEY', JSON.stringify(data.user));
+                    window.location.href = 'admin.html';
+                }
+            })
 
+        })
     })
-})
 </script>
 </html>
