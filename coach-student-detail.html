@@ -3,7 +3,7 @@
 <!-- Head -->
 
 <head>
-    <title>eSchool | Student</title>
+    <title>eSchool | Student Detail</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -47,19 +47,25 @@
     </div>
 
     <div class="u-header-middle">
-        <a class="js-sidebar-invoker u-sidebar-invoker text-danger" href="#!" data-is-close-all-except-this="true" data-target="#sidebar">
+        <a class="js-sidebar-invoker u-sidebar-invoker text-danger" href="#!" data-is-close-all-except-this="true"
+           data-target="#sidebar">
             <i class="fa fa-bars u-sidebar-invoker__icon--open"></i>
             <i class="fa fa-times u-sidebar-invoker__icon--close"></i>
         </a>
 
-        <div class="u-header-search" data-search-mobile-invoker="#headerSearchMobileInvoker" data-search-target="#headerSearch">
-            <a id="headerSearchMobileInvoker" class="btn btn-link input-group-prepend u-header-search__mobile-invoker" href="#!">
+        <div class="u-header-search" data-search-mobile-invoker="#headerSearchMobileInvoker"
+             data-search-target="#headerSearch">
+            <a id="headerSearchMobileInvoker" class="btn btn-link input-group-prepend u-header-search__mobile-invoker"
+               href="#!">
                 <i class="fa fa-search"></i>
             </a>
 
             <div id="headerSearch" class="u-header-search-form">
                 <form>
                     <div class="input-group">
+                        <!-- <button class="btn-link input-group-prepend u-header-search__btn" type="submit">
+                            <i class="fa fa-search"></i>
+                        </button> -->
                         <input class="form-control u-header-search__field" type="search" placeholder="Search">
                         <button type="submit" class="bg-gradient text-white">Search</button>
                     </div>
@@ -67,10 +73,11 @@
             </div>
         </div>
     </div>
+
     <div class="u-header-right">
         <!-- Activities -->
         <div class="dropdown mr-4">
-            <a class="text-danger" href="#!" role="button" id="dropdownMenuLink1" aria-haspopup="true"
+            <a class="text-danger" href="#!" role="button" id="dropdownMenuLink" aria-haspopup="true"
                aria-expanded="false" data-toggle="dropdown">
                     <span class="h3">
                         <i class="far fa-envelope"></i>
@@ -78,7 +85,7 @@
                 <span class="u-indicator u-indicator-top-right u-indicator--xxs bg-success"></span>
             </a>
 
-            <div class="dropdown-menu dropdown-menu-right border-0 py-0 mt-4" aria-labelledby="dropdownMenuLink1"
+            <div class="dropdown-menu dropdown-menu-right border-0 py-0 mt-4" aria-labelledby="dropdownMenuLink"
                  style="width: 360px;">
                 <div class="card">
                     <div class="card-header d-flex align-items-center py-3">
@@ -181,7 +188,7 @@
 
         <!-- Notifications -->
         <div class="dropdown mr-3">
-            <a class="text-danger" href="#!" role="button" id="dropdownMenuLink2" aria-haspopup="true"
+            <a class="text-danger" href="#!" role="button" id="dropdownMenuLink" aria-haspopup="true"
                aria-expanded="false" data-toggle="dropdown">
                     <span class="h3">
                         <i class="far fa-bell"></i>
@@ -189,7 +196,7 @@
                 <span class="u-indicator u-indicator-top-right u-indicator--xxs bg-danger"></span>
             </a>
 
-            <div class="dropdown-menu dropdown-menu-right border-0 py-0 mt-4" aria-labelledby="dropdownMenuLink2"
+            <div class="dropdown-menu dropdown-menu-right border-0 py-0 mt-4" aria-labelledby="dropdownMenuLink"
                  style="width: 360px;">
                 <div class="card">
                     <div class="card-header d-flex align-items-center py-3">
@@ -327,7 +334,7 @@
                     <div class="card-body">
                         <ul class="list-unstyled mb-0">
                             <li class="mb-4">
-                                <a class="d-flex align-items-center link-dark" href="#!">
+                                <a class="d-flex align-items-center link-dark" href="coach-my-profile.html">
                                     <span class="h3 mb-0"><i class="far fa-user-circle text-muted mr-3"></i></span> View
                                     Profile
                                 </a>
@@ -345,7 +352,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="d-flex align-items-center link-dark" href="#!">
+                                <a class="d-flex align-items-center link-dark" href="index.html" onclick="logOut()">
                                     <span class="h3 mb-0"><i class="far fa-share-square text-muted mr-3"></i></span>
                                     Sign Out
                                 </a>
@@ -372,173 +379,82 @@
 
             <nav class="u-sidebar-nav">
                 <ul class="u-sidebar-nav-menu u-sidebar-nav-menu--top-level">
-
-                    <!-- Homework -->
+                    <!-- Routines -->
                     <li class="u-sidebar-nav-menu__item">
-                        <a class="u-sidebar-nav-menu__link" href="#!" data-target="#homework">
-                            <i class="fas fa-home u-sidebar-nav-menu__item-icon"></i>
-                            <span class="u-sidebar-nav-menu__item-title">Homework</span>
+                        <a class="u-sidebar-nav-menu__link" href="#!" data-target="#subMenu1">
+                            <i class="fas fa-stopwatch u-sidebar-nav-menu__item-icon"></i>
+                            <span class="u-sidebar-nav-menu__item-title">My Routines</span>
                             <i class="fa fa-angle-right u-sidebar-nav-menu__item-arrow"></i>
                             <span class="u-sidebar-nav-menu__indicator"></span>
                         </a>
 
-                        <ul id="homework" class="u-sidebar-nav-menu u-sidebar-nav-menu--second-level" style="display: none;">
+                        <ul id="subMenu1" class="u-sidebar-nav-menu u-sidebar-nav-menu--second-level"
+                            style="display: none;">
                             <li class="u-sidebar-nav-menu__item">
-                                <a class="u-sidebar-nav-menu__link" href="homework-blank.html">
-                                    <span class="u-sidebar-nav-menu__item-title">Homework Blank</span>
+                                <a class="u-sidebar-nav-menu__link" href="routines-mathmetics.html">
+                                    <span class="u-sidebar-nav-menu__item-title">Routines Mathmetics</span>
                                 </a>
                             </li>
                             <li class="u-sidebar-nav-menu__item">
-                                <a class="u-sidebar-nav-menu__link" href="homework.html">
-                                    <span class="u-sidebar-nav-menu__item-title">Homework</span>
+                                <a class="u-sidebar-nav-menu__link" href="routines-mathmetics-add.html">
+                                    <span class="u-sidebar-nav-menu__item-title">Add Routines Mathmetics</span>
                                 </a>
                             </li>
                             <li class="u-sidebar-nav-menu__item">
-                                <a class="u-sidebar-nav-menu__link" href="homework-add-new.html">
-                                    <span class="u-sidebar-nav-menu__item-title">Add New Homework</span>
+                                <a class="u-sidebar-nav-menu__link" href="routines-accounting.html">
+                                    <span class="u-sidebar-nav-menu__item-title">Routines Accounting</span>
+                                </a>
+                            </li>
+                            <li class="u-sidebar-nav-menu__item">
+                                <a class="u-sidebar-nav-menu__link" href="routines-accounting-add.html">
+                                    <span class="u-sidebar-nav-menu__item-title">Add Routines Accounting</span>
                                 </a>
                             </li>
                         </ul>
                     </li>
-                    <!-- End Homework -->
+                    <!-- End Routines-->
 
-                    <!-- Questions -->
+                    <!-- Attendances -->
                     <li class="u-sidebar-nav-menu__item">
-                        <a class="u-sidebar-nav-menu__link" href="#!" data-target="#questions">
-                            <i class="fas fa-question u-sidebar-nav-menu__item-icon"></i>
-                            <span class="u-sidebar-nav-menu__item-title">Questions</span>
+                        <a class="u-sidebar-nav-menu__link" href="#!" data-target="#attendances">
+                            <i class="fas fa-user-check u-sidebar-nav-menu__item-icon"></i>
+                            <span class="u-sidebar-nav-menu__item-title">Attendances</span>
                             <i class="fa fa-angle-right u-sidebar-nav-menu__item-arrow"></i>
                             <span class="u-sidebar-nav-menu__indicator"></span>
                         </a>
 
-                        <ul id="questions" class="u-sidebar-nav-menu u-sidebar-nav-menu--second-level" style="display: none;">
+                        <ul id="attendances" class="u-sidebar-nav-menu u-sidebar-nav-menu--second-level" style="display: none;">
                             <li class="u-sidebar-nav-menu__item">
-                                <a class="u-sidebar-nav-menu__link" href="questions-blank.html">
-                                    <span class="u-sidebar-nav-menu__item-title">Questions Blank</span>
+                                <a class="u-sidebar-nav-menu__link" href="coach-attendances.html">
+                                    <span class="u-sidebar-nav-menu__item-title">Attendances List</span>
                                 </a>
                             </li>
                             <li class="u-sidebar-nav-menu__item">
-                                <a class="u-sidebar-nav-menu__link" href="questions-bank.html">
-                                    <span class="u-sidebar-nav-menu__item-title">Questions Bank</span>
-                                </a>
-                            </li>
-                            <li class="u-sidebar-nav-menu__item">
-                                <a class="u-sidebar-nav-menu__link" href="questions-add.html">
-                                    <span class="u-sidebar-nav-menu__item-title">Add Questions</span>
+                                <a class="u-sidebar-nav-menu__link" href="attendances-report.html">
+                                    <span class="u-sidebar-nav-menu__item-title">Attendances Report</span>
                                 </a>
                             </li>
                         </ul>
                     </li>
-                    <!-- End Questions -->
+                    <!-- End Attendances -->
 
-                    <!-- Exam -->
+                    <!-- Students -->
                     <li class="u-sidebar-nav-menu__item">
-                        <a class="u-sidebar-nav-menu__link" href="#!" data-target="#online-exam">
-                            <i class="fas fa-diagnoses u-sidebar-nav-menu__item-icon"></i>
-                            <span class="u-sidebar-nav-menu__item-title">Exam</span>
+                        <a class="u-sidebar-nav-menu__link" href="#!" data-target="#students" >
+                            <i class="fas fa-user-graduate u-sidebar-nav-menu__item-icon"></i>
+                            <span class="u-sidebar-nav-menu__item-title">All Students</span>
                             <i class="fa fa-angle-right u-sidebar-nav-menu__item-arrow"></i>
                             <span class="u-sidebar-nav-menu__indicator"></span>
                         </a>
-
-                        <ul id="online-exam" class="u-sidebar-nav-menu u-sidebar-nav-menu--second-level" style="display: none;">
-                            <li class="u-sidebar-nav-menu__item">
-                                <a class="u-sidebar-nav-menu__link" href="online-exam-blank.html">
-                                    <span class="u-sidebar-nav-menu__item-title">Online Exam Blank</span>
-                                </a>
-                            </li>
-                            <li class="u-sidebar-nav-menu__item">
-                                <a class="u-sidebar-nav-menu__link" href="online-exams.html">
-                                    <span class="u-sidebar-nav-menu__item-title">Online Exams</span>
-                                </a>
-                            </li>
-                            <li class="u-sidebar-nav-menu__item">
-                                <a class="u-sidebar-nav-menu__link" href="online-exam-add.html">
-                                    <span class="u-sidebar-nav-menu__item-title">Add Online Exam</span>
-                                </a>
-                            </li>
-                        </ul>
                     </li>
-                    <!-- End Exams -->
-
-                    <!-- Marks -->
-                    <li class="u-sidebar-nav-menu__item">
-                        <a class="u-sidebar-nav-menu__link" href="#!" data-target="#marks">
-                            <i class="far fa-clipboard u-sidebar-nav-menu__item-icon"></i>
-                            <span class="u-sidebar-nav-menu__item-title">Marks</span>
-                            <i class="fa fa-angle-right u-sidebar-nav-menu__item-arrow"></i>
-                            <span class="u-sidebar-nav-menu__indicator"></span>
-                        </a>
-
-                        <ul id="marks" class="u-sidebar-nav-menu u-sidebar-nav-menu--second-level" style="display: none;">
-                            <li class="u-sidebar-nav-menu__item">
-                                <a class="u-sidebar-nav-menu__link" href="marks-blank.html">
-                                    <span class="u-sidebar-nav-menu__item-title">Marks Blank</span>
-                                </a>
-                            </li>
-                            <li class="u-sidebar-nav-menu__item">
-                                <a class="u-sidebar-nav-menu__link" href="marks.html">
-                                    <span class="u-sidebar-nav-menu__item-title">Marks</span>
-                                </a>
-                            </li>
-                            <li class="u-sidebar-nav-menu__item">
-                                <a class="u-sidebar-nav-menu__link" href="marks-add.html">
-                                    <span class="u-sidebar-nav-menu__item-title">Add Marks</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- End Marks -->
-
-                    <!-- Tuition -->
-                    <li class="u-sidebar-nav-menu__item">
-                        <a class="u-sidebar-nav-menu__link" href="#!" data-target="#marks">
-                            <i class="far fa-clipboard u-sidebar-nav-menu__item-icon"></i>
-                            <span class="u-sidebar-nav-menu__item-title">Tuition</span>
-                            <i class="fa fa-angle-right u-sidebar-nav-menu__item-arrow"></i>
-                            <span class="u-sidebar-nav-menu__indicator"></span>
-                        </a>
-
-                        <ul id="tuition" class="u-sidebar-nav-menu u-sidebar-nav-menu--second-level" style="display: none;">
-                            <li class="u-sidebar-nav-menu__item">
-                                <a class="u-sidebar-nav-menu__link" href="marks-blank.html">
-                                    <span class="u-sidebar-nav-menu__item-title">Marks Blank</span>
-                                </a>
-                            </li>
-                            <li class="u-sidebar-nav-menu__item">
-                                <a class="u-sidebar-nav-menu__link" href="marks.html">
-                                    <span class="u-sidebar-nav-menu__item-title">Marks</span>
-                                </a>
-                            </li>
-                            <li class="u-sidebar-nav-menu__item">
-                                <a class="u-sidebar-nav-menu__link" href="marks-add.html">
-                                    <span class="u-sidebar-nav-menu__item-title">Add Marks</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- End Tuition-->
+                    <!-- End Students -->
 
                     <!-- Profile -->
                     <li class="u-sidebar-nav-menu__item">
-                        <a class="u-sidebar-nav-menu__link" href="#!" data-target="#profile">
+                        <a class="u-sidebar-nav-menu__link" href="coach-my-profile.html">
                             <i class="fa fa-user u-sidebar-nav-menu__item-icon"></i>
                             <span class="u-sidebar-nav-menu__item-title">My Profile</span>
-                            <i class="fa fa-angle-right u-sidebar-nav-menu__item-arrow"></i>
-                            <span class="u-sidebar-nav-menu__indicator"></span>
                         </a>
-
-                        <ul id="profile" class="u-sidebar-nav-menu u-sidebar-nav-menu--second-level" style="display: none;">
-                            <li class="u-sidebar-nav-menu__item">
-                                <a class="u-sidebar-nav-menu__link" href="my-profile.html">
-                                    <span class="u-sidebar-nav-menu__item-title">My Profile</span>
-                                </a>
-                            </li>
-                            <li class="u-sidebar-nav-menu__item">
-                                <a class="u-sidebar-nav-menu__link" href="edit-my-profile.html">
-                                    <span class="u-sidebar-nav-menu__item-title">Edit Profile</span>
-                                </a>
-                            </li>
-                        </ul>
                     </li>
                     <!-- End Profile -->
                 </ul>
@@ -547,6 +463,7 @@
     </aside>
     <!-- End Sidebar -->
 
+
     <div class="u-content">
         <div class="u-body">
 
@@ -554,7 +471,7 @@
             <section class="breadcumb-area card bg-gradient mb-5">
                 <div class="bread-cumb-content card-body d-flex align-items-center">
                     <div class="breadcumb-heading">
-                        <h2 class="text-white">Dashboard</h2>
+                        <h2 class="text-white">Student Information</h2>
                     </div>
                     <div class="breadcumb-image ml-auto">
                         <img src="assets/img/breadcumb-dashboard.png" alt="">
@@ -563,78 +480,24 @@
             </section>
             <!-- End breadcumb-area -->
 
-            <!-- Deal Overview -->
-            <div class="card mb-4">
-                <!-- Card Header -->
-                <header class="card-header text-center">
-                    <h2 class="h3 card-header-title text-dark pt-2">Attendances of the year</h2>
-                </header>
-                <!-- End Card Header -->
-
-                <!-- Card Body -->
-                <div class="card-body">
-                    <div class="row">
-                        <!-- Chart -->
-                        <div class="col-md-12 mb-4 mb-md-0" style="min-height: 300px;">
-                            <canvas class="js-overall-income-chart" width="1000" height="300"></canvas>
-                        </div>
-                        <!-- End Chart -->
+            <section class="profile-area card">
+                <div class="profile-content card-body d-flex">
+                    <div class="user-image-wrap mr-5">
+                        <img id="img" height="200px" width="180px" style="margin-top: 60px">
+                    </div>
+                    <div class="user-about">
+                        <h2 class="text-danger">Name: <span id="name"></span></h2>
+                        <p>Username: <span id="username"> </span></p>
+                        <p>Email: <span id="email"></span></p>
+                        <p>Phone: <span id="phone"></span></p>
+                        <p>Address: <span id="address"></span></p>
+                        <p>Status: <span id="status"></span></p>
+                        <br>
+                        <br>
                     </div>
                 </div>
-                <!-- End Card Body -->
-            </div>
-            <!-- End Deal Overview -->
-
-            <!-- highlight-area start -->
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-asset-counting-list-box bg-gradient bg-gradient-purple card border-0 text-center">
-                        <div class="card-body">
-                            <div class="single-asset-counting-list-image-wrap">
-                                <img src="assets/img/student.png" alt="">
-                            </div>
-                            <h2 class="text-white mb-0">160 <small class="d-block mt-2">Students</small></h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-asset-counting-list-box bg-gradient bg-gradient-blue card border-0 text-center">
-                        <div class="card-body">
-                            <div class="single-asset-counting-list-image-wrap">
-                                <img src="assets/img/teacher.png" alt="">
-                            </div>
-                            <h2 class="text-white mb-0">15 <small class="d-block mt-2">Teachers</small></h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-asset-counting-list-box bg-gradient bg-gradient-green card border-0 text-center">
-                        <div class="card-body">
-                            <div class="single-asset-counting-list-image-wrap">
-                                <img src="assets/img/parent.png" alt="">
-                            </div>
-                            <h2 class="text-white mb-0">160 <small class="d-block mt-2">Parent</small></h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-asset-counting-list-box bg-gradient bg-gradient-yellow card border-0 text-center">
-                        <div class="card-body">
-                            <div class="single-asset-counting-list-image-wrap">
-                                <img src="assets/img/staff.png" alt="">
-                            </div>
-                            <h2 class="text-white mb-0">10 <small class="d-block mt-2">Staff</small></h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- highlight-area End -->
+            </section>
         </div>
-
-
     </div>
 </main>
 
@@ -649,15 +512,24 @@
 <script src="assets/vendor/chart.js/dist/Chart.min.js"></script>
 <script src="assets/js/jquery.nice-select.min.js"></script>
 <script src="assets/js/jquery-ui.min.js"></script>
+
 <!-- Initialization  -->
 <script src="assets/js/sidebar-nav.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/dashboard-page-scripts.js"></script>
-<!--<script src="assets/js/scripts.js"></script>-->
-</body>
+<script scr="assets/js/coach.js"></script>
 <script>
-    // if(window.sessionStorage.getItem('TOKEN_KEY')){
-    //     window.location.href='index.html';
-    // }
+    let student = JSON.parse(window.sessionStorage.getItem("student"));
+
+    document.getElementById("name").innerText = student.name;
+    document.getElementById("username").innerText = student.username;
+    document.getElementById("email").innerText = student.email;
+    document.getElementById("phone").innerText = student.phone;
+    document.getElementById("address").innerText = student.address;
+    document.getElementById("img").src = student.avatar;
+    document.getElementById("status").innerText = student.status;
+
 </script>
+</body>
+
 </html>
