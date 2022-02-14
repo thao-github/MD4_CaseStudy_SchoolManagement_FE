@@ -25,6 +25,7 @@
     <!-- Theme Styles -->
     <link rel="stylesheet" href="assets/css/theme.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
 
     <!-- Custom Charts -->
     <style>
@@ -35,6 +36,20 @@
     </style>
 </head>
 <!-- End Head -->
+
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyDAcVDY54CgLrMsF62GM1UJt79U5YwUKMI",
+        authDomain: "case-study-md4.firebaseapp.com",
+        projectId: "case-study-md4",
+        storageBucket: "case-study-md4.appspot.com",
+        messagingSenderId: "1075801629660",
+        appId: "1:1075801629660:web:ff596cc3eb33c2f37da519",
+        measurementId: "G-VJFQG43GD9"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+</script>
 
 <body>
 <!-- Header (Topbar) -->
@@ -47,13 +62,16 @@
     </div>
 
     <div class="u-header-middle">
-        <a class="js-sidebar-invoker u-sidebar-invoker text-danger" href="#!" data-is-close-all-except-this="true" data-target="#sidebar">
+        <a class="js-sidebar-invoker u-sidebar-invoker text-danger" href="#!" data-is-close-all-except-this="true"
+           data-target="#sidebar">
             <i class="fa fa-bars u-sidebar-invoker__icon--open"></i>
             <i class="fa fa-times u-sidebar-invoker__icon--close"></i>
         </a>
 
-        <div class="u-header-search" data-search-mobile-invoker="#headerSearchMobileInvoker" data-search-target="#headerSearch">
-            <a id="headerSearchMobileInvoker" class="btn btn-link input-group-prepend u-header-search__mobile-invoker" href="#!">
+        <div class="u-header-search" data-search-mobile-invoker="#headerSearchMobileInvoker"
+             data-search-target="#headerSearch">
+            <a id="headerSearchMobileInvoker" class="btn btn-link input-group-prepend u-header-search__mobile-invoker"
+               href="#!">
                 <i class="fa fa-search"></i>
             </a>
 
@@ -372,6 +390,17 @@
 
             <nav class="u-sidebar-nav">
                 <ul class="u-sidebar-nav-menu u-sidebar-nav-menu--top-level">
+
+                    <!-- Profile -->
+                    <li class="u-sidebar-nav-menu__item">
+                        <a class="u-sidebar-nav-menu__link" href="admin.html" data-target="#profile">
+                            <i class="fa fa-user u-sidebar-nav-menu__item-icon"></i>
+                            <span>My Profile</span>
+                            <span class="u-sidebar-nav-menu__indicator"></span>
+                        </a>
+                    </li>
+                    <!-- End Profile -->
+
                     <!-- Coach -->
                     <li class="u-sidebar-nav-menu__item">
                         <a class="u-sidebar-nav-menu__link" href="#!" data-target="#attendances">
@@ -381,27 +410,28 @@
                             <span class="u-sidebar-nav-menu__indicator"></span>
                         </a>
 
-                        <ul id="attendances" class="u-sidebar-nav-menu u-sidebar-nav-menu--second-level" style="display: none;">
+                        <ul id="attendances" class="u-sidebar-nav-menu u-sidebar-nav-menu--second-level"
+                            style="display: none;">
                             <li class="u-sidebar-nav-menu__item">
-                                <a class="u-sidebar-nav-menu__link" href="students-all.html">
+                                <a class="u-sidebar-nav-menu__link" href="coach.html">
                                     <span class="u-sidebar-nav-menu__item-title">All Coaches</span>
                                 </a>
                             </li>
                             <li class="u-sidebar-nav-menu__item">
-                                <a class="u-sidebar-nav-menu__link" href="students-add.html">
+                                <a class="u-sidebar-nav-menu__link" href="coach.html">
                                     <span class="u-sidebar-nav-menu__item-title">Add New Coach</span>
                                 </a>
                             </li>
-<!--                            <li class="u-sidebar-nav-menu__item">-->
-<!--                                <a class="u-sidebar-nav-menu__link" href="attendances-report-blank.html">-->
-<!--                                    <span class="u-sidebar-nav-menu__item-title">Attendances Report Blank</span>-->
-<!--                                </a>-->
-<!--                            </li>-->
-<!--                            <li class="u-sidebar-nav-menu__item">-->
-<!--                                <a class="u-sidebar-nav-menu__link" href="attendances-report.html">-->
-<!--                                    <span class="u-sidebar-nav-menu__item-title">Attendances Report</span>-->
-<!--                                </a>-->
-<!--                            </li>-->
+                            <!--                            <li class="u-sidebar-nav-menu__item">-->
+                            <!--                                <a class="u-sidebar-nav-menu__link" href="attendances-report-blank.html">-->
+                            <!--                                    <span class="u-sidebar-nav-menu__item-title">Attendances Report Blank</span>-->
+                            <!--                                </a>-->
+                            <!--                            </li>-->
+                            <!--                            <li class="u-sidebar-nav-menu__item">-->
+                            <!--                                <a class="u-sidebar-nav-menu__link" href="attendances-report.html">-->
+                            <!--                                    <span class="u-sidebar-nav-menu__item-title">Attendances Report</span>-->
+                            <!--                                </a>-->
+                            <!--                            </li>-->
                         </ul>
                     </li>
                     <!-- End Coach -->
@@ -415,7 +445,8 @@
                             <span class="u-sidebar-nav-menu__indicator"></span>
                         </a>
 
-                        <ul id="students" class="u-sidebar-nav-menu u-sidebar-nav-menu--second-level" style="display: none;">
+                        <ul id="students" class="u-sidebar-nav-menu u-sidebar-nav-menu--second-level"
+                            style="display: none;">
                             <li class="u-sidebar-nav-menu__item">
                                 <a class="u-sidebar-nav-menu__link" href="students-all.html">
                                     <span class="u-sidebar-nav-menu__item-title">All Students</span>
@@ -439,7 +470,8 @@
                             <span class="u-sidebar-nav-menu__indicator"></span>
                         </a>
 
-                        <ul id="homework" class="u-sidebar-nav-menu u-sidebar-nav-menu--second-level" style="display: none;">
+                        <ul id="homework" class="u-sidebar-nav-menu u-sidebar-nav-menu--second-level"
+                            style="display: none;">
                             <li class="u-sidebar-nav-menu__item">
                                 <a class="u-sidebar-nav-menu__link" href="homework-blank.html">
                                     <span class="u-sidebar-nav-menu__item-title">Homework Blank</span>
@@ -463,12 +495,13 @@
                     <li class="u-sidebar-nav-menu__item">
                         <a class="u-sidebar-nav-menu__link" href="#!" data-target="#online-exam">
                             <i class="fas fa-diagnoses u-sidebar-nav-menu__item-icon"></i>
-                            <span class="u-sidebar-nav-menu__item-title">Exam</span>
+                            <span class="u-sidebar-nav-menu__item-title">Course</span>
                             <i class="fa fa-angle-right u-sidebar-nav-menu__item-arrow"></i>
                             <span class="u-sidebar-nav-menu__indicator"></span>
                         </a>
 
-                        <ul id="online-exam" class="u-sidebar-nav-menu u-sidebar-nav-menu--second-level" style="display: none;">
+                        <ul id="online-exam" class="u-sidebar-nav-menu u-sidebar-nav-menu--second-level"
+                            style="display: none;">
                             <li class="u-sidebar-nav-menu__item">
                                 <a class="u-sidebar-nav-menu__link" href="online-exam-blank.html">
                                     <span class="u-sidebar-nav-menu__item-title">Online Exam Blank</span>
@@ -497,7 +530,8 @@
                             <span class="u-sidebar-nav-menu__indicator"></span>
                         </a>
 
-                        <ul id="marks" class="u-sidebar-nav-menu u-sidebar-nav-menu--second-level" style="display: none;">
+                        <ul id="marks" class="u-sidebar-nav-menu u-sidebar-nav-menu--second-level"
+                            style="display: none;">
                             <li class="u-sidebar-nav-menu__item">
                                 <a class="u-sidebar-nav-menu__link" href="marks-blank.html">
                                     <span class="u-sidebar-nav-menu__item-title">Marks Blank</span>
@@ -517,29 +551,7 @@
                     </li>
                     <!-- End Marks -->
 
-                    <!-- Profile -->
-                    <li class="u-sidebar-nav-menu__item">
-                        <a class="u-sidebar-nav-menu__link" href="#!" data-target="#profile">
-                            <i class="fa fa-user u-sidebar-nav-menu__item-icon"></i>
-                            <span class="u-sidebar-nav-menu__item-title">My Profile</span>
-                            <i class="fa fa-angle-right u-sidebar-nav-menu__item-arrow"></i>
-                            <span class="u-sidebar-nav-menu__indicator"></span>
-                        </a>
 
-                        <ul id="profile" class="u-sidebar-nav-menu u-sidebar-nav-menu--second-level" style="display: none;">
-                            <li class="u-sidebar-nav-menu__item">
-                                <a class="u-sidebar-nav-menu__link" href="my-profile.html">
-                                    <span class="u-sidebar-nav-menu__item-title">My Profile</span>
-                                </a>
-                            </li>
-                            <li class="u-sidebar-nav-menu__item">
-                                <a class="u-sidebar-nav-menu__link" href="edit-my-profile.html">
-                                    <span class="u-sidebar-nav-menu__item-title">Edit Profile</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- End Profile -->
                 </ul>
             </nav>
         </div>
@@ -549,91 +561,49 @@
     <div class="u-content">
         <div class="u-body">
 
-            <!-- breadcumb-area -->
-            <section class="breadcumb-area card bg-gradient mb-5">
-                <div class="bread-cumb-content card-body d-flex align-items-center">
-                    <div class="breadcumb-heading">
-                        <h2 class="text-white">Dashboard</h2>
+            <!--            &lt;!&ndash; breadcumb-area &ndash;&gt;-->
+            <!--            <section class="breadcumb-area card bg-gradient mb-5">-->
+            <!--                <div class="bread-cumb-content card-body d-flex align-items-center">-->
+            <!--                    <div class="breadcumb-heading">-->
+            <!--                        <h2 class="text-white">My Profile</h2>-->
+            <!--                    </div>-->
+            <!--                    <div class="breadcumb-image ml-auto">-->
+            <!--                        <img src="assets/img/breadcumb-dashboard.png" alt="">-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </section>-->
+            <!--            &lt;!&ndash; End breadcumb-area &ndash;&gt;-->
+
+            <section class="profile-area card">
+                <div class="profile-content card-body d-flex">
+                    <div class="user-image-wrap mr-5">
+                        <img id="img" style="margin-top: 70px; border-radius: 20px; width: 180px; height: 180px" src="">
                     </div>
-                    <div class="breadcumb-image ml-auto">
-                        <img src="assets/img/breadcumb-dashboard.png" alt="">
+                    <div class="user-about">
+                        <h2 class="text-danger">Full name: <input style="color: #696969"   id="name">
+                        </h2>
+                        <h2 class="text-danger" hidden>Id <input style="color: #696969; border-radius: 16px" id="id">
+                        </h2>
+                        <p><strong>(Administrator)</strong></p>
+                        <h2 class="text-danger">Username: <input style="color: #696969; border-radius: 16px"
+                                                                 id="username"></h2>
+                        <br>
+                        <h2 class="text-danger">Email: <input style="color: #696969; border-radius: 16px" id="email">
+                        </h2>
+                        <br>
+                        <h2 class="text-danger">Avatar: <input type="file" value="upload" accept=".jpg" id="fileButton">
+                        </h2>
+                        <br>
+
+                        <h2 class="text-danger">Password: <input type="password" placeholder="***********" id="password">
+                        </h2>
+                        <br>
+                        <a onclick="edit()" id="editAdmin" class="btn btn-outline-danger pl-4 pr-4">Edit</a>
+
                     </div>
                 </div>
             </section>
-            <!-- End breadcumb-area -->
-
-            <!-- Deal Overview -->
-            <div class="card mb-4">
-                <!-- Card Header -->
-                <header class="card-header text-center">
-                    <h2 class="h3 card-header-title text-dark pt-2">Attendances of the year</h2>
-                </header>
-                <!-- End Card Header -->
-
-                <!-- Card Body -->
-                <div class="card-body">
-                    <div class="row">
-                        <!-- Chart -->
-                        <div class="col-md-12 mb-4 mb-md-0" style="min-height: 300px;">
-                            <canvas class="js-overall-income-chart" width="1000" height="300"></canvas>
-                        </div>
-                        <!-- End Chart -->
-                    </div>
-                </div>
-                <!-- End Card Body -->
-            </div>
-            <!-- End Deal Overview -->
-
-            <!-- highlight-area start -->
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-asset-counting-list-box bg-gradient bg-gradient-purple card border-0 text-center">
-                        <div class="card-body">
-                            <div class="single-asset-counting-list-image-wrap">
-                                <img src="assets/img/student.png" alt="">
-                            </div>
-                            <h2 class="text-white mb-0">160 <small class="d-block mt-2">Students</small></h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-asset-counting-list-box bg-gradient bg-gradient-blue card border-0 text-center">
-                        <div class="card-body">
-                            <div class="single-asset-counting-list-image-wrap">
-                                <img src="assets/img/teacher.png" alt="">
-                            </div>
-                            <h2 class="text-white mb-0">15 <small class="d-block mt-2">Teachers</small></h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-asset-counting-list-box bg-gradient bg-gradient-green card border-0 text-center">
-                        <div class="card-body">
-                            <div class="single-asset-counting-list-image-wrap">
-                                <img src="assets/img/parent.png" alt="">
-                            </div>
-                            <h2 class="text-white mb-0">160 <small class="d-block mt-2">Parent</small></h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-asset-counting-list-box bg-gradient bg-gradient-yellow card border-0 text-center">
-                        <div class="card-body">
-                            <div class="single-asset-counting-list-image-wrap">
-                                <img src="assets/img/staff.png" alt="">
-                            </div>
-                            <h2 class="text-white mb-0">10 <small class="d-block mt-2">Staff</small></h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- highlight-area End -->
         </div>
-
-
     </div>
 </main>
 
@@ -654,7 +624,138 @@
 <script src="assets/js/dashboard-page-scripts.js"></script>
 <!--<script src="assets/js/scripts.js"></script>-->
 </body>
-<script>
+<script type="text/javascript">
+
+
+    function getAdmin() {
+        let user = JSON.parse(window.sessionStorage.getItem("USER_KEY"));
+        document.getElementById("id").value =user.id;
+        document.getElementById("name").value =user.name;
+        document.getElementById("username").value =user.username;
+        document.getElementById("email").value = user.email;
+        document.getElementById("img").src = user.avatar;
+    }
+
+    getAdmin()
+
+    function upLoadFile() {
+        let srcImg;
+        var image = '';
+        // firebase bucket name
+        // REPLACE WITH THE ONE YOU CREATE
+        // ALSO CHECK STORAGE RULES IN FIREBASE CONSOLE
+        var fbBucketName = 'images';
+
+        // get elements
+        var uploader = document.getElementById('uploader');
+        var fileButton = document.getElementById('fileButton');
+
+        // listen for file selection
+        fileButton.addEventListener('change', function (e) {
+
+            // what happened
+            console.log('file upload event', e);
+
+            // get file
+            var file = e.target.files[0];
+
+            // create a storage ref
+            var storageRef = firebase.storage().ref(`${fbBucketName}/${file.name}`);
+
+            // upload file
+            var uploadTask = storageRef.put(file);
+
+            // The part below is largely copy-pasted from the 'Full Example' section from
+            // https://firebase.google.com/docs/storage/web/upload-files
+
+            // update progress bar
+            uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
+                function (snapshot) {
+                    // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+                    // var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                    // uploader.value = progress;
+                    // console.log('Upload is ' + progress + '% done');
+                    switch (snapshot.state) {
+                        case firebase.storage.TaskState.PAUSED: // or 'paused'
+                            console.log('Upload is paused');
+                            break;
+                        case firebase.storage.TaskState.RUNNING: // or 'running'
+                            console.log('Upload is running');
+                            break;
+                    }
+                }, function (error) {
+
+                    // A full list of error codes is available at
+                    // https://firebase.google.com/docs/storage/web/handle-errors
+                    switch (error.code) {
+                        case 'storage/unauthorized':
+                            // User doesn't have permission to access the object
+                            break;
+
+                        case 'storage/canceled':
+                            // User canceled the upload
+                            break;
+
+                        case 'storage/unknown':
+                            // Unknown error occurred, inspect error.serverResponse
+                            break;
+                    }
+                }, function () {
+                    // Upload completed successfully, now we can get the download URL
+                    // save this link somewhere, e.g. put it in an input field
+                    var downloadURL = uploadTask.snapshot.downloadURL;
+                    // image = downloadURL;
+                    console.log('downloadURL ===>', downloadURL);
+                    let img = document.getElementById("img");
+                    img.src = downloadURL
+                    srcImg = downloadURL
+                    console.log('pic ==', downloadURL)
+                });
+
+        });
+    }
+
+    upLoadFile();
+
+
+    function edit() {
+        let id = document.getElementById("id").value;
+        let name = document.getElementById("name").value;
+        let avatar = document.getElementById("img").src;
+        let username = document.getElementById("username").value;
+        let email = document.getElementById("email").value.trim();
+        let password = document.getElementById("password").value;
+
+        let user = {
+            'id': id,
+            'name': name,
+            'avatar': avatar,
+            'username': username,
+            'email': email,
+            'password': password
+        }
+        console.log(user)
+
+        $.ajax({
+            type: "PUT",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            url: "http://localhost:8080/users/" + id,
+            data: JSON.stringify(user),
+            //xử lý khi thành công
+            success: function (data) {
+                window.sessionStorage.removeItem("USER_KEY")
+                window.sessionStorage.setItem("USER_KEY", JSON.stringify(data))
+                window.location.href = 'admin.html';
+                alert("Edit Success!")
+            },
+            error: function (err) {
+                console.log(err)
+            }
+        })
+    }
 
 </script>
 </html>
